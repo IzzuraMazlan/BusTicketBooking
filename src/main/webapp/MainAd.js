@@ -1,13 +1,8 @@
-$(function () {
-  	$('.navbar-toggle-sidebar').click(function () {
-  		$('.navbar-nav').toggleClass('slide-in');
-  		$('.side-body').toggleClass('body-slide-in');
-  		$('#search').removeClass('in').addClass('collapse').slideUp(200);
-  	});
+const sidebar = document.getElementById("sidebar");
+    const content = document.getElementById("content");
+    const toggleBtn = document.getElementById("toggle-btn");
 
-  	$('#search-trigger').click(function () {
-  		$('.navbar-nav').removeClass('slide-in');
-  		$('.side-body').removeClass('body-slide-in');
-  		$('.search-input').focus();
-  	});
-  });
+    toggleBtn.addEventListener("click", function() {
+      sidebar.classList.toggle("closed");
+      content.classList.toggle("closed");
+    });
